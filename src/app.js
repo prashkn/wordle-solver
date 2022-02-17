@@ -18,7 +18,7 @@ function buttonClicked() {
   for (g of VALID_GUESSES) {
     txt += g + ", ";
   }
-  wordList.innerHTML = txt;
+  wordList.innerHTML = txt.substring(0, txt.length - 2);
   guess.value = "";
   hints.value = "";
 }
