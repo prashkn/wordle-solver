@@ -6,12 +6,12 @@ function buttonClicked() {
   var hints = document.getElementById("inputHints");
 
   //if inputs are invalid, alert error msg
-  if (!validateInputs(guess.value, hints.value)) {
+  if (!validateInputs(guess.value.toLowerCase(), hints.value.toLowerCase())) {
     alert("Invalid inputs");
     return;
   }
 
-  updateWordleList(guess.value, hints.value);
+  updateWordleList(guess.value.toLowerCase(), hints.value.toLowerCase());
 
   //update vals
   let txt = "";
