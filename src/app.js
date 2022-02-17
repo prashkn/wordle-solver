@@ -14,7 +14,11 @@ function buttonClicked() {
   updateWordleList(guess.value, hints.value);
 
   //update vals
-  wordList.innerHTML = VALID_GUESSES;
+  let txt = "";
+  for (g of VALID_GUESSES) {
+    txt += g + ", ";
+  }
+  wordList.innerHTML = txt;
   guess.value = "";
   hints.value = "";
 }
