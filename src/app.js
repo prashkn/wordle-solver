@@ -4,6 +4,7 @@ function buttonClicked() {
   var wordList = document.getElementById("word-text");
   var guess = document.getElementById("inputWords");
   var hints = document.getElementById("inputHints");
+  var amnt_of_words = document.getElementById("amntwords");
 
   //if inputs are invalid, alert error msg
   if (!validateInputs(guess.value.toLowerCase(), hints.value.toLowerCase())) {
@@ -18,6 +19,8 @@ function buttonClicked() {
   for (g of VALID_GUESSES) {
     txt += g + ", ";
   }
+
+  amnt_of_words.innerHTML = "(" + VALID_GUESSES.length + ")";
   wordList.innerHTML = txt.substring(0, txt.length - 2);
   guess.value = "";
   hints.value = "";
